@@ -1,0 +1,40 @@
+{
+  "products": [
+    {
+      "id": "11111",
+      "name": "McAndre Coffee Cup",
+      "description": "McANdre coffee cup is a state of the art coffee cup which people who are willing to spend fifty grand for a cup will buy. Doesn't do anything special. Made with clay. No gold or silver plating.",
+      "image": ""
+    },
+    {
+      "id": "22222",
+      "name": "London Eye",
+      "description": "",
+      "image": ""
+    },
+    {
+      "id": "33333",
+      "name": "London Eye",
+      "description": "",
+      "image": ""
+    },
+    {
+      "id": "44444",
+      "name": "London Eye",
+      "description": "",
+      "image": ""
+    },
+    {
+      "id": "55555",
+      "name": "London Eye",
+      "description": "",
+      "image": ""
+    },
+    {
+      "id": "66666",
+      "name": "London Eye",
+      "description": "",
+      "image": ""
+    }
+  ]
+}
