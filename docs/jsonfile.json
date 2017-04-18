@@ -1,0 +1,40 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Staples FSC-Certified Copy Paper",
+      "description": "For busy offices, the Staples FSC-certified copy paper case helps ensure that you'll always have a supply on hand for large print jobs or everyday documentation requirements. It comes with standard white paper that can be used in all types of office equipment, so you won't need to worry about finding different options for each machine. With its bright white surface, the Staples paper enables you to create brilliant, professional prints.",
+      "image": "https://abinodh.github.io/Shopinator/1.png"
+    },
+    {
+      "id": "2",
+      "name": "Polypropylene Strap Kit with Metal Buckles",
+      "description": "An all in one strapping kit with everything you need for light -to medium-strength strapping tasks. Kit includes portable dispenser box, 3,000' of 1/2' black polypropylene strapping with 325 lb. tensile strength. 300 heavy duty metal buckles and combination cutting and tensioning tool",
+      "image": "https://abinodh.github.io/Shopinator/2.png"
+    },
+    {
+      "id": "3",
+      "name": "Econo-Pac Polypropylene Strapping Kits, Heavy Duty Kit",
+      "description": "Double-wall dispenser carton. 7,200' of 1/2 black polypropylene strapping with 500 lb. tensile strength. Includes 600 metal seals, one tensioning tool, one sealing tool and complete instructions",
+      "image": "https://abinodh.github.io/Shopinator/3.png"
+    },
+    {
+      "id": "4",
+      "name": "Staples Envelopes White T4 5-3/4' x 9'",
+      "description": "T4, 5-3/4' x 9', Open end with gummed flap, FSC-Certified 24 lb white Square flap with side seam",
+      "image": "https://abinodh.github.io/Shopinator/4.png"
+    },
+    {
+      "id": "5",
+      "name": "Brother (MFC-L2720DW) Monochrome Laser All-In-One with Wireless Networking and Duplex",
+      "description": "Fast printing and copying. Help improve your productivity with print and copy speeds of up to 30ppm and produce professional output at up to 2400 x 600 dpi. Flexible paper handling. Features an adjustable, 250-sheet capacity paper tray for letter or legal size paper. Plus, a single-sheet manual feed slot for envelopes, labels or thicker media",
+      "image": "https://abinodh.github.io/Shopinator/5.png"
+    },
+    {
+      "id": "6",
+      "name": "Fisher-Price Power Wheels Teenage Mutant Ninja Turtles",
+      "description": "Drives 3 and 6 mph (4.8 km/h and 9.6 km/h) max. forward and 3 mph (4.8 km/h) max. reverse. Teenage Mutant Ninja Turtles colours & graphics. Realistic off-road styling. 12-Volt battery (charger included) - Assembly required. Flashy 'chrome' wheels & accents",
+      "image": "https://abinodh.github.io/Shopinator/6.png"
+    }
+  ]
+}
