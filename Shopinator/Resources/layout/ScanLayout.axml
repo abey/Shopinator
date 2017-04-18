@@ -9,38 +9,30 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_margin="10dp"
-        android:orientation="vertical"
-        android:padding="50dp">
-        <ImageView
-            android:layout_width="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:text="Welcome to the Product Scan page, please press the scan button and proceed with scanning the barcode/qrcode."
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="20dp"
-            android:src="@drawable/ic_launcher" />
+            android:id="@+id/scanPageHelp" />
         <Button
-            android:id="@+id/scanBtn"
+            android:id="@+id/scanCode"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/password"
             android:layout_marginTop="10dp"
             android:background="#000000"
-            android:text="SCAN PRODUCT"
-            android:textColor="@android:color/white"
-            android:layout_marginBottom="30dp"
-            android:textSize="15dp"
-            android:paddingBottom="20dp"
-            android:paddingTop="20dp" />
+            android:text="PRESS HERE TO SCAN"
+            android:textColor="@android:color/white" />
         <Button
-            android:id="@+id/productListBtn"
+            android:id="@+id/goBackBtn"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/password"
             android:layout_marginTop="10dp"
             android:background="#000000"
-            android:text="Product List"
-            android:textColor="@android:color/white"
-            android:textSize="15dp"
-            android:paddingBottom="20dp"
-            android:paddingTop="20dp" />
+            android:text="Go back to the Main Menu"
+            android:textColor="@android:color/white" />
     </LinearLayout>
 </RelativeLayout>

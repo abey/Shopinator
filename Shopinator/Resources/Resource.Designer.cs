@@ -26,6 +26,9 @@ namespace Shopinator
 		
 		public static void UpdateIdValues()
 		{
+			global::ZXing.Mobile.Resource.Id.contentFrame = global::Shopinator.Resource.Id.contentFrame;
+			global::ZXing.Mobile.Resource.Layout.zxingscanneractivitylayout = global::Shopinator.Resource.Layout.zxingscanneractivitylayout;
+			global::ZXing.Mobile.Resource.Layout.zxingscannerfragmentlayout = global::Shopinator.Resource.Layout.zxingscannerfragmentlayout;
 		}
 		
 		public partial class Attribute
@@ -63,8 +66,14 @@ namespace Shopinator
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f05000f
+			public const int contentFrame = 2131034127;
+			
 			// aapt resource value: 0x7f05000b
 			public const int create_user = 2131034123;
+			
+			// aapt resource value: 0x7f05000e
+			public const int goBackBtn = 2131034126;
 			
 			// aapt resource value: 0x7f050004
 			public const int login = 2131034116;
@@ -83,6 +92,12 @@ namespace Shopinator
 			
 			// aapt resource value: 0x7f050006
 			public const int scanBtn = 2131034118;
+			
+			// aapt resource value: 0x7f05000d
+			public const int scanCode = 2131034125;
+			
+			// aapt resource value: 0x7f05000c
+			public const int scanPageHelp = 2131034124;
 			
 			// aapt resource value: 0x7f050000
 			public const int textView1 = 2131034112;
@@ -120,6 +135,15 @@ namespace Shopinator
 			
 			// aapt resource value: 0x7f030002
 			public const int RegistrationLayout = 2130903042;
+			
+			// aapt resource value: 0x7f030003
+			public const int ScanLayout = 2130903043;
+			
+			// aapt resource value: 0x7f030004
+			public const int zxingscanneractivitylayout = 2130903044;
+			
+			// aapt resource value: 0x7f030005
+			public const int zxingscannerfragmentlayout = 2130903045;
 			
 			static Layout()
 			{

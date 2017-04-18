@@ -30,6 +30,7 @@ namespace Shopinator
         private void scan_Click(object sender, EventArgs e)
         {
             Toast.MakeText(this, "Loading Barcode Scanner...", ToastLength.Short).Show();
+            StartActivity(typeof(ScanActivity));
         }
 
         private void product_list_Click(object sender, EventArgs e)
