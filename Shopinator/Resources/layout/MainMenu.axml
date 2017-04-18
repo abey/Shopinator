@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2579BF"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:padding="50dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/ic_launcher" />
+        <Button
+            android:id="@+id/scanBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/password"
+            android:layout_marginTop="10dp"
+            android:background="#000000"
+            android:text="SCAN"
+            android:textColor="@android:color/white"
+            android:padding="50dp"
+            android:layout_marginBottom="30dp"
+            android:textSize="20dp" />
+        <Button
+            android:id="@+id/productListBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/password"
+            android:layout_marginTop="10dp"
+            android:background="#000000"
+            android:text="Product List"
+            android:textColor="@android:color/white"
+            android:padding="50dp"
+            android:textSize="20dp" />
+    </LinearLayout>
+</RelativeLayout>
