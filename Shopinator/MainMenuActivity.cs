@@ -36,6 +36,7 @@ namespace Shopinator
         private void product_list_Click(object sender, EventArgs e)
         {
             Toast.MakeText(this, "Loading Product List...", ToastLength.Short).Show();
+            StartActivity(typeof(ProductListActivity));
         }
 
     }
