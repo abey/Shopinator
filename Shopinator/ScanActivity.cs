@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -11,17 +10,18 @@ using Android.Views;
 using Android.Widget;
 using ZXing.Mobile;
 
+
+
 namespace Shopinator
 {
     [Activity(Label = "ScanActivity")]
+
     public class ScanActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.ScanLayout);
-            MobileBarcodeScanner.Initialize(Application);
-
             Button scanCodeSrc = FindViewById<Button>(Resource.Id.scanCode);
             Button goBackSrc = FindViewById<Button>(Resource.Id.goBackBtn);
 
@@ -29,16 +29,13 @@ namespace Shopinator
             goBackSrc.Click += goBackSrc_Click;
         }
 
-        private async void scanCodeSrc_Click(object sender, EventArgs e)
+        public async void scanCodeSrc_Click(object sender, EventArgs e)
         {
-            var scanner = new ZXing.Mobile.MobileBarcodeScanner();
+            MobileBarcodeScanner.Initialize(Application);
+            MobileBarcodeScanner scanner = new MobileBarcodeScanner();
             var result = await scanner.Scan();
-
             if (result != null)
-            {
                 Console.WriteLine("Scanned Barcode: " + result.Text);
-                Toast.MakeText(this, result.Text, ToastLength.Short).Show();
-            }
         }
 
         private void goBackSrc_Click(object sender, EventArgs e)

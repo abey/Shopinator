@@ -27,7 +27,8 @@
             android:layout_width="fill_parent"
             android:layout_height="45dp"
             android:padding="5dp"
-            android:background="@android:color/black" />
+            android:textColor="@android:color/black"
+            android:background="@android:color/white"/>
         <View
             android:layout_width="fill_parent"
             android:layout_height="2dp"
@@ -44,8 +45,10 @@
             android:layout_width="fill_parent"
             android:layout_height="45dp"
             android:padding="5dp"
-            android:background="@android:color/black"
-            android:inputType="textPassword" />
+            android:textColor="@android:color/black"
+            android:background="@android:color/white"
+            android:inputType="textPassword"
+            android:layout_marginBottom="40dp" />
         <Button
             android:id="@+id/login"
             android:layout_width="fill_parent"
