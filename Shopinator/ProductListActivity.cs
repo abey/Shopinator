@@ -2,13 +2,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
+using System.Net;
 
 namespace Shopinator
 {
@@ -17,36 +19,22 @@ namespace Shopinator
     {
         private ListView productListView;
         private List<string> productList;
+        public const string API = "https://abinodh.github.io/Shopinator/jsonfile.json";
 
-        // JSON STUFF START
-        public class Product
-        {
-            public string id { get; set; }
-            public string name { get; set; }
-            public string description { get; set; }
-            public string image { get; set; }
-        }
-
-        public class RootObject
-        {
-            public List<Product> products { get; set; }
-        }
-        // JSON STUFF END
-
+            //string json = "{\"products\": [{\"id\": \"1\",\"name\": \"Staples FSC-Certified Copy Paper\"},{\"id\": \"2\",\"name\": \"Polypropylene Strap Kit with Metal Buckles\"},{\"id\": \"3\",\"name\": \"aafaf\"}]}";
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
+            var json = new WebClient().DownloadString(API);
             SetContentView(Resource.Layout.ProductList);
-
+            RootObject r = JsonConvert.DeserializeObject<RootObject>(json);
             productListView = FindViewById<ListView>(Resource.Id.productListView);
             productList = new List<string>();
-            productList.Add("Item 0 \n somestuff");
-            productList.Add("Item \n somestuff1");
-            productList.Add("Item \n somestuff2");
-            productList.Add("Item \n somestuff3");
-            productList.Add("Item \n somestuff4");
 
+            for (int i=0; i<6;i++)
+            {
+                productList.Add("Name: " + r.products[i].name + "\n\nID: " + r.products[i].id + "\n\nDescription: " + r.products[i].description + "\n\n\n");
+            }
             ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, productList);
             productListView.Adapter = adapter;
             productListView.ItemClick += Listnames_ItemClick;
@@ -56,5 +44,7 @@ namespace Shopinator
         {
             Toast.MakeText(this, e.Position.ToString(), ToastLength.Long).Show();
         }
+
+        
     }
 }
