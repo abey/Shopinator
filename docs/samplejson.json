@@ -1,0 +1,39 @@
+{
+	"products": [{
+			"id": "1",
+			"name": "Staples FSC-Certified Copy Paper",
+			"description": "For busy offices",
+			"image": "https://abinodh.github.io/Shopinator/1.png"
+		},
+		{
+			"id": "2",
+			"name": "Polypropylene Strap Kit with Metal Buckles",
+			"description": "An all in one",
+			"image": "https://abinodh.github.io/Shopinator/2.png"
+		},
+		{
+			"id": "3",
+			"name": "Econo-Pac Polypropylene Strapping Kits, Heavy Duty Kit",
+			"description": "Double-wall dispenser carton",
+			"image": "https://abinodh.github.io/Shopinator/3.png"
+		},
+		{
+			"id": "4",
+			"name": "Staples Envelopes White T4 5-3/4' x 9'",
+			"description": "Open end with gummed flap",
+			"image": "https://abinodh.github.io/Shopinator/4.png"
+		},
+		{
+			"id": "5",
+			"name": "Brother (MFC-L2720DW) Monochrome Laser All-In-One with Wireless Networking and Duplex",
+			"description": "Fast printing and copying",
+			"image": "https://abinodh.github.io/Shopinator/5.png"
+		},
+		{
+			"id": "6",
+			"name": "Fisher-Price Power Wheels Teenage Mutant Ninja Turtles",
+			"description": "Drives 3 and 6 mph",
+			"image": "https://abinodh.github.io/Shopinator/6.png"
+		}
+	]
+}
