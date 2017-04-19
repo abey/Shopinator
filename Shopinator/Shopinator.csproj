@@ -92,9 +92,6 @@
     <AndroidResource Include="Resources\layout\MainMenu.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\ScanLayout.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
     <AndroidResource Include="Resources\layout\ProductList.axml">
       <SubType>Designer</SubType>
     </AndroidResource>

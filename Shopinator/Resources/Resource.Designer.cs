@@ -66,9 +66,6 @@ namespace Shopinator
 			// aapt resource value: 0x7f06000c
 			public const int create_user = 2131099660;
 			
-			// aapt resource value: 0x7f06000f
-			public const int goBackBtn = 2131099663;
-			
 			// aapt resource value: 0x7f060004
 			public const int login = 2131099652;
 			
@@ -89,12 +86,6 @@ namespace Shopinator
 			
 			// aapt resource value: 0x7f060006
 			public const int scanBtn = 2131099654;
-			
-			// aapt resource value: 0x7f06000e
-			public const int scanCode = 2131099662;
-			
-			// aapt resource value: 0x7f06000d
-			public const int scanPageHelp = 2131099661;
 			
 			// aapt resource value: 0x7f060000
 			public const int textView1 = 2131099648;
@@ -135,9 +126,6 @@ namespace Shopinator
 			
 			// aapt resource value: 0x7f030003
 			public const int RegistrationLayout = 2130903043;
-			
-			// aapt resource value: 0x7f030004
-			public const int ScanLayout = 2130903044;
 			
 			static Layout()
 			{
