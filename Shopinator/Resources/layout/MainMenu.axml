@@ -24,7 +24,7 @@
             android:layout_below="@id/password"
             android:layout_marginTop="10dp"
             android:background="#000000"
-            android:text="SCAN PRODUCT"
+            android:text="Scan Product"
             android:textColor="@android:color/white"
             android:layout_marginBottom="30dp"
             android:textSize="15dp"

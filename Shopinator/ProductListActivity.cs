@@ -45,7 +45,7 @@ namespace Shopinator
 
         private void Listnames_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
-            string dataLink = "https://abinodh.github.io/Shopinator/" + (e.Position.ToString() + 1) + ".png";
+            string dataLink = "https://abinodh.github.io/Shopinator/" + (e.Position + 1) + ".png";
             Toast.MakeText(this, "Opening " + dataLink, ToastLength.Long).Show();
             var uri = Android.Net.Uri.Parse(dataLink);
             var intent = new Intent(Intent.ActionView, uri);

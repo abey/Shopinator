@@ -10,6 +10,16 @@
         android:layout_height="fill_parent"
         android:minWidth="25px"
         android:minHeight="25px">
+        <TextView
+              android:text="Product Listing"
+              android:textAppearance="?android:attr/textAppearanceLarge"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/title"
+              android:background="#000000"
+              android:paddingBottom="3dp"
+              android:paddingTop="3dp"
+              android:paddingLeft="70dp" />
         <ListView
             android:minWidth="25px"
             android:minHeight="25px"
