@@ -15,14 +15,11 @@ namespace Shopinator
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-
-            // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
             unameSrc = FindViewById<EditText>(Resource.Id.userName);
             pswdSrc = FindViewById<EditText>(Resource.Id.password);
 
-            //Initializing button from layout
             Button login = FindViewById<Button>(Resource.Id.login);
             Button register = FindViewById<Button>(Resource.Id.register);
 
@@ -31,7 +28,6 @@ namespace Shopinator
             CreateDB();
         }
 
-        //Login button click action
         private void LoginBtn_Click (object sender, EventArgs e) {
             try
             {
@@ -41,12 +37,12 @@ namespace Shopinator
                 var data1 = data.Where(x => x.username == unameSrc.Text && x.password == pswdSrc.Text).FirstOrDefault(); //Linq Query  
                 if (data1 != null)
                 {
-                    Toast.MakeText(this, "Login Success", ToastLength.Short).Show();
+                    Toast.MakeText(this, "Login Successful", ToastLength.Short).Show();
                     StartActivity(typeof(MainMenuActivity));
                 }
                 else
                 {
-                    Toast.MakeText(this, "Username or Password invalid", ToastLength.Short).Show();
+                    Toast.MakeText(this, "Username or Password is invalid. Please try again!", ToastLength.Short).Show();
                 }
             }
             catch (Exception ex)
@@ -62,11 +58,9 @@ namespace Shopinator
 
         public string CreateDB()
         {
-            var output = "";
-            output += "Creating Databse if it doesnt exists";
+            var output = "DB Setup";
             string databaseSource = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "userinfo.db3");
             var database = new SQLiteConnection(databaseSource);
-            output += "\n Database Created....";
             return output;
         }
     }
