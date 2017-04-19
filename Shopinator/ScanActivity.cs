@@ -18,7 +18,8 @@ namespace Shopinator
     public class ScanActivity : Activity, IOnScanListener, IDialogInterfaceOnCancelListener
     {
         private BarcodePicker picker;
-        public static string appKey = "AVwpuQYTHE5gFCB1uhW2ICsgS+avHh+YAlLHBKxsncBaRoV3xVR3IYJmaaGYQi9sm23PdCUmuHr/PGkVWHRzoDFRazqWWhFnqiElo45yqH+4Q0b4yQSwZ/J+vx7ihKaJcf0av8FOne80mD8oiknPBMQSwbPPtL3UrCaASyxDwEsNn/q0xNFSYLlNvcSRfVjM7FYTQrffmhzHIR1Ogmy+zDlZfJVROEiNwWdVeKsMLpnp38akpUE7htMQBL6ncZa+9pf4Avx5jlh/KyquxHuz0wwYnBWp4MSFPk6opudlpJK+UFt0ga1aMzHsS1t0g396ev3LVevLoT8S43CgmI4pLmMBwR+LCY9Dr6fOf5yRM2lb1wGzlE9PczoegYt7fcZ3v26lTVyJF+pGcVuLn4k4OUfY6CELsMx3PK7EFd4YVB8vgZWoE6H6xn6G8g6R8bHRK72y664RijgvGxIDDKqE02yp9wHtLOUr8qxwsBGIFdK34RaDqZJJ+sMI2rRWmft7o47V0Duaegx1gcn4AAd1NCVdvqITbeX9SD91uMXGtvAufgRCaWnCnY5GPo2rlgUc1nUf/KKvCaqUDp62ZNTsiPrNHWwdC96mUD1WJwEPM9xtBcsaY2vQE9YJpPEk3FaBKcMs5/QnvdCtQ1qPNx5En6Dg6gi/WTdCpyUXTx3Re0pk+gFzP4WFBXV1QqC4DhpjhWs8ZbHqfvWoOL4iC0at33bwJq7u6iDIWCrqquXzEHGB1vkSqwb8XIf5AXsTX15zLMTnghe6sjXPnO+XXtflgQ06iBMFDwDoYw==";
+        int resultData;
+        public static string appKey = "AYe56jITKMMJB4mjUzUvieos2qlrNovm5EMhejZ6Z365REbbrmcstoo38ZKjfUqsjl8Iu4EJ3/sCF5UhN2dHzt8+qdMgfHBRb1PxUHp+zFCPXmmSD2qhOAkqX9mqGLp0wAdxbBWk2FVYPqXlgmFeny07pFvAuMuFV/13w6fXKuUM6oBYFloziGEqN1ovmifbD16BSgvWKIu2qJ6dA/lEyOQLLbjx3OEcrolPRwn2wdSelIECIE8+WdiYOlgcBGcFBdRyrvbh5UTS/20pDO9Qi48wTwXqKzcn8t2KSZokFnzqwjM3W4wLJEfy1EW6Anm4zNA+rhS6BFCDmEtHbXr/Lx9j9LfgB0ah02lO3/y7SBnMtTr7ozaRm5qLZYyJv2VtAgOgJPr7T9YE7QgBkUntNsXoQBW90la47+NPixNVkv3ODDbQ0GOTDiWvtU0X7rB6N1oBsvvGO1XlfjB7FnPEN7Kd6o4eNPW7Ksos0VYF/XR4BR3CqhACcTmPrLHTzG5pZG7NvmrCA0IdWNiLvs1/Hqi3O/uYnlmuZaBJaTqIUNf78VB1OqVh2LykPc0OkmHSkkyPG4w5saX1vicEV2GmBsdS2an38uE7lMM2+98jiEyQ6gLbd7SHRb2NqL1CyAj8dBd5WYTwi/+8ODFIJQrUzgGi5EypZF5NkGGzkdZ/8LBYc6Aq9RK1OA8GwkR9ccVqwIn2lpf/d9cOvjo1BVxsxe68ehKav7CplLtWLxaXyYIvy0VpOI9iNsUV6vAAfWo53nBkSgUsOpW39pOp7kYkIKbk0/3LaxIGh6IU+BH/k/0=";
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -65,19 +66,11 @@ namespace Shopinator
                 Console.WriteLine("barcode scanned: {0}, '{1}'", code.SymbologyName, code.Data);
                 GC.Collect();
                 session.StopScanning();
-
-                RunOnUiThread(() => {
-                    AlertDialog alert = new AlertDialog.Builder(this)
-                        .SetTitle(code.SymbologyName + " Barcode Detected")
-                        .SetMessage(code.Data)
-                        .SetPositiveButton("OK", delegate {
-                            picker.StartScanning();
-                        })
-                        .SetOnCancelListener(this)
-                        .Create();
-
-                    alert.Show();
-                });
+                resultData = Int32.Parse(code.Data);
+                string dataLink = "https://abinodh.github.io/Shopinator/" + resultData + ".png";
+                var uri = Android.Net.Uri.Parse(dataLink);
+                var intent = new Intent(Intent.ActionView, uri);
+                StartActivity(intent);
             }
         }
 

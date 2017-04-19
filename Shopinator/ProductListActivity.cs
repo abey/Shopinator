@@ -30,7 +30,7 @@ namespace Shopinator
             string characterCountString = new WebClient().DownloadString(COUNT_API);
             int count = Int32.Parse(characterCountString);
             SetContentView(Resource.Layout.ProductList);
-            RootObject r = JsonConvert.DeserializeObject<RootObject>(json);
+            ShopObject r = JsonConvert.DeserializeObject<ShopObject>(json);
             productListView = FindViewById<ListView>(Resource.Id.productListView);
             productList = new List<string>();
 
@@ -43,9 +43,9 @@ namespace Shopinator
             productListView.ItemClick += Listnames_ItemClick;
         }
 
-        private void Listnames_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        private void Listnames_ItemClick(object sender, AdapterView.ItemClickEventArgs entity)
         {
-            string dataLink = "https://abinodh.github.io/Shopinator/" + (e.Position + 1) + ".png";
+            string dataLink = "https://abinodh.github.io/Shopinator/" + (entity.Position + 1) + ".png";
             Toast.MakeText(this, "Opening " + dataLink, ToastLength.Long).Show();
             var uri = Android.Net.Uri.Parse(dataLink);
             var intent = new Intent(Intent.ActionView, uri);

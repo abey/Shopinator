@@ -20,7 +20,7 @@ namespace Shopinator
         public string image { get; set; }
     }
 
-    public class RootObject
+    public class ShopObject
     {
         public List<Product> products { get; set; }
     }
